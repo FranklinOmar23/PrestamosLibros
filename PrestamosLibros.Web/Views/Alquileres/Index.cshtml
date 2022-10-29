@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PrestamosLibros.Web.Models.Alquileres>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Libros Alquilados</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Alquileres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Lector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Libro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Salidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Entrada)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Alquileres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Lector)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Libro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Salidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Entrada)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

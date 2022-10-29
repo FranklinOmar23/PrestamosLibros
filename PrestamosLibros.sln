@@ -15,13 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrestamosLibros.Web", "Pres
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{41CB6A6C-8605-466D-ADAD-5B07C7966682}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestamosLibros.Api", "PrestamosLibros.Api\PrestamosLibros.Api.csproj", "{F3FD79F9-0559-4EF7-94AA-7933D14B8412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrestamosLibros.Api", "PrestamosLibros.Api\PrestamosLibros.Api.csproj", "{F3FD79F9-0559-4EF7-94AA-7933D14B8412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestamosLibros.Business", "PrestamosLibros.Business\PrestamosLibros.Business.csproj", "{2730FF0B-A8A2-40DB-A18C-FE6597BC2F83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrestamosLibros.Business", "PrestamosLibros.Business\PrestamosLibros.Business.csproj", "{2730FF0B-A8A2-40DB-A18C-FE6597BC2F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestamosLibros.Data", "PrestamosLibros.Data\PrestamosLibros.Data.csproj", "{71268FB6-8AB3-4240-9884-0FED9B6FF663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrestamosLibros.Data", "PrestamosLibros.Data\PrestamosLibros.Data.csproj", "{71268FB6-8AB3-4240-9884-0FED9B6FF663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestamosLibros.Services", "PrestamosLibros.Services\PrestamosLibros.Services.csproj", "{3B599675-FE74-4348-BA62-0B67CF8B4F05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrestamosLibros.Services", "PrestamosLibros.Services\PrestamosLibros.Services.csproj", "{3B599675-FE74-4348-BA62-0B67CF8B4F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrestamosLibros.Modelo", "PrestamosLibros.Modelo\PrestamosLibros.Modelo.csproj", "{5DEFBB4C-D623-41F5-84D7-00A4112DBA5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{3B599675-FE74-4348-BA62-0B67CF8B4F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B599675-FE74-4348-BA62-0B67CF8B4F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B599675-FE74-4348-BA62-0B67CF8B4F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DEFBB4C-D623-41F5-84D7-00A4112DBA5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DEFBB4C-D623-41F5-84D7-00A4112DBA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DEFBB4C-D623-41F5-84D7-00A4112DBA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DEFBB4C-D623-41F5-84D7-00A4112DBA5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{2730FF0B-A8A2-40DB-A18C-FE6597BC2F83} = {3DF1C108-7B95-4ED3-A93E-BEA7707B4C1C}
 		{71268FB6-8AB3-4240-9884-0FED9B6FF663} = {71627834-184A-4B7A-93F3-5946D8E1D038}
 		{3B599675-FE74-4348-BA62-0B67CF8B4F05} = {584ADEDB-A364-4F6C-BE48-8ACAAEBE1A8C}
+		{5DEFBB4C-D623-41F5-84D7-00A4112DBA5E} = {71627834-184A-4B7A-93F3-5946D8E1D038}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {044BD015-0F76-4E1E-8755-12A98B2D49F4}
