@@ -1,16 +1,24 @@
-﻿using PrestamosLibros.Data.Entities;
+﻿using PrestamosLibros.Data.Context;
+using PrestamosLibros.Data.Core;
+using PrestamosLibros.Data.Entities;
+using PrestamosLibros.Data.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace PrestamosLibros.Data.Repository
 {
-    internal class CategoriasRepository : Interfaces.ICaegoriasRepository
+    public class CategoriasRepository : RepositoryBase<Categorias>, ICaegoriasRepository
     {
+        private readonly PrestamosLibrosContext context;
+        public CategoriasRepository(PrestamosLibrosContext context) : base(context) => this.context = context;
+
+
         public Categorias GetAlquileres(int ID_Categorias)
         {
             throw new NotImplementedException();
         }
+        public override IEnumerable<Categorias> GetEntities() => context.Categorias.Where(dep => !dep.Deleted);
 
         public void Remove(Categorias categorias)
         {

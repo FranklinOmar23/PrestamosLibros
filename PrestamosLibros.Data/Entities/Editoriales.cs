@@ -4,8 +4,9 @@ using System.Text;
 
 namespace PrestamosLibros.Data.Entities
 {
-    internal class Editoriales
+    public class Editoriales
     {
         public Editorial Editorial { get; set; }
+        public object ID_Editoriales { get; internal set; }
     }
 }

@@ -1,30 +1,68 @@
 ﻿using PrestamosLibros.Data.Entities;
+using PrestamosLibros.Data.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Linq.Expressions;
+using Microsoft.Extensions.Logging;
+using PrestamosLibros.Data.Context;
+using PrestamosLibros.Data.Core;
 
 namespace PrestamosLibros.Data.Repository
 {
-    internal class AlquileresRepository : Interfaces.IAlquileresRepository
+
+    public class AlquileresRepository : IAlquileresRepository
     {
+        private readonly PrestamosLibrosContext context;
+
+        private readonly ILogger<LibrosRepository> logger;
+        public AlquileresRepository(PrestamosLibrosContext context, ILogger<LibrosRepository> logger)
+        {
+            this.context = context;
+            this.logger = logger;
+        }
+        public bool Exists(int ID_Alquileres)
+        {
+            return context.Alquileres.Any(cd => cd.ID_Alquileres == ID_Alquileres);
+        }
+        public bool Exists(Expression<Func<Alquileres, bool>> filter)
+        {
+            return this.context.Alquileres.Any(filter);
+        }
+
         public Alquileres GetAlquileres(int ID_Alquileres)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(Alquileres alquileres)
+        public IEnumerable<Alquileres> GetEntities()
         {
-            throw new NotImplementedException();
+            return context.Alquileres.OrderByDescending(st => st.Creation_Date);
         }
-
-        public void Save(Alquileres alquileres)
+        public Alquileres GetEntity(int courseId)
         {
-            throw new NotImplementedException();
+            return context.Alquileres.Find(courseId);
         }
-
-        public void Update(Alquileres alquileres)
+        public void Remove(Alquileres course)
         {
-            throw new NotImplementedException();
+            try
+            {
+                context.Alquileres.Remove(course);
+
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError($"Error removiendo el curso {ex.Message}", ex.ToString());
+            }
+        }
+        public void Save(Alquileres course)
+        {
+            context.Alquileres.Add(course);
+            context.SaveChanges();
+        }
+        public void Update(Alquileres course)
+        {
+            throw new System.NotImplementedException();
         }
     }
-}
+    }

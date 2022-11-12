@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PrestamosLibros.Data.Entities
 {
-    internal class Categorias : Core.EntidadBase
+    public class Categorias : Core.EntidadBase
     {
         public Categoria Categoria { get; set; }
     }

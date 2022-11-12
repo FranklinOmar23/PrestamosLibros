@@ -2,7 +2,7 @@
 
 namespace PrestamosLibros.Data.Entities
 {
-    internal class Alquileres : Core.EntidadBase
+    public class Alquileres : Core.EntidadBase
     {
         public int ID_Alquileres { get; set; }
         public int ID_Lector { get; set; } 

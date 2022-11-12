@@ -4,8 +4,7 @@ using System.Text;
 
 namespace PrestamosLibros.Data.Entities
 {
-    public class Autores : Core.EntidadBase
+    public class LibrosRepository
     {
-        public Autor Autore { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PrestamosLibros.Data.Interfaces
 {
-      interface IEditorialesRepository
+      public interface IEditorialesRepository
     {
         void Save(Editoriales editoriales);
         void Update(Editoriales editoriales);
